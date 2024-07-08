@@ -35,7 +35,6 @@ const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
   flex-wrap: wrap;
   padding: 0 20px;
 

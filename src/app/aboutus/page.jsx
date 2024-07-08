@@ -8,7 +8,7 @@ import Stack from 'react-bootstrap/Stack';
 import Accordion from 'react-bootstrap/Accordion';
 import styled from "styled-components";
 import Image from "next/image";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 const Page = () =>{
     /*AOS*/
     useEffect(() => {
@@ -57,7 +57,7 @@ const Page = () =>{
                 <section className="page__title">
                     <div className="container">
                         <div className="aboutus__img" data-aos="flip-left">
-                            <Image src="/public/images/aboutus.jpg" className="rounded" alt="about us"  width={50} height={450} />
+                            <Image src="/images/about1.jpg" className="rounded" alt="about us"  width={1020} height={450} />
                         </div>
                         <div className="content row">
                             <div className="col-md-4 d-flex">
@@ -119,7 +119,7 @@ const Page = () =>{
                             </div>
                         </div>
                         <div className="items-content-center col-md-6">
-                            <Image src="/public/images/about1.jpg" alt="about us" className="rounded-5" width={480} height={500} />
+                            <Image src="/images/about1.jpg" alt="about us" className="rounded-5" width={480} height={500} />
                         </div>
                     </div>
                 </section>
@@ -136,7 +136,7 @@ const Page = () =>{
                                 <div className="row mt-5">
 
                                     <div className="col-md-6">
-                                        <Image src="/public/images/about2.jpg" alt="about us" className="rounded-5" width={450} height={400} />
+                                        <Image src="/images/about2.jpg" alt="about us" className="rounded-5" width={450} height={400} />
                                     </div>
 
                                     <div className="accordion col-md-6 mb-3">

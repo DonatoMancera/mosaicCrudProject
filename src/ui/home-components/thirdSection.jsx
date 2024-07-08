@@ -1,37 +1,38 @@
 "use client"
 import React from "react"
 import styled from "styled-components"
-import  Carousel  from "react-bootstrap/Carousel"
+import   Carousel   from "react-bootstrap/Carousel"
 import Image from "next/image"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ThirdSection = () =>{
     const cardData = [
         {
             title: "E-commerce",
             intro: "Yllamco laboris nisi ut aliquip ex ea commodo.",
-            backgroundImage: "/public/images/Foto1.png"
+            backgroundImage: require("/public/images/Foto1.png")
         },
         {
             title: "Your CV as website",
             intro: "Yllamco laboris nisi ut aliquip ex ea commodo.",
-            backgroundImage: "/public/images/Foto2.png"
+            backgroundImage: require("/public/images/Foto2.png")
         },
         {
             title: "Another Service",
             intro: "Yllamco laboris nisi ut aliquip ex ea commodo.",
-            backgroundImage: "/public/images/Foto3.png"
+            backgroundImage: require("/public/images/Foto3.png")
         },
         {
             title: "Another Service",
             intro: "Yllamco laboris nisi ut aliquip ex ea commodo.",
-            backgroundImage: "/public/images/Foto4.png"
+            backgroundImage: require("/public/images/Foto4.png")
         }
     ];
     
     return (
         <ThirdContainer>
             <div className="thirdTextContainer">
-                    <Image src="/public/images/tres.jpg" alt="" width={30} height={30} />
+                    <Image src="/images/tres.jpg" alt="" width={400} height={350} />
                 <div>
                     <h2>Discover more of our services</h2>
                     <p>Beyond designing web pages, we design solutions.<br/>
@@ -47,7 +48,7 @@ const ThirdSection = () =>{
             <Carousel className="carrusel" data-bs-theme="light" >
                 {cardData.map((item, index) =>(
                     <Carousel.Item key={index}>
-                        <Image className="d-block w-100" src={item.backgroundImage} alt="" width={30} height={30} />
+                        <Image className="d-block w-100" src={item.backgroundImage} alt="" width={500} height={450} />
                         <Carousel.Caption>
                             <h3>{item.title}</h3>
                             <p>{item.intro}</p>

@@ -3,7 +3,7 @@ import { conn } from "@/libs/mysql";
 
 export async function GET(request, {params}){
     try {
-        const thisEmail = await conn.query("SELECT * FROM email WHERE emain_id = ?",[ 
+        const thisEmail = await conn.query("SELECT * FROM email WHERE email_id = ?",[ 
             params.id,
         ]);
         if (thisEmail.length === 0) {
@@ -24,7 +24,7 @@ export async function GET(request, {params}){
 export async function DELETE(request, {params}){
 
     try {
-        const thisEmail = await conn.query('DELETE FROM email WHERE emain_id = ?', [
+        const thisEmail = await conn.query('DELETE FROM email WHERE email_id = ?', [
         params.id
     ]);
     if (thisEmail.affectedRows === 0) {
@@ -45,13 +45,13 @@ export async function PUT(request, {params}){
 
     try {
         const data = await request.json()
-        const thisEmail = await conn.query('UPDATE email SET ? WHERE emain_id  = ?', [data, params.id])
+        const thisEmail = await conn.query('UPDATE email SET ? WHERE email_id  = ?', [data, params.id])
 
         if (thisEmail.affectedRows === 0) {
             return NextResponse.json({message: "Producto no encontrado"}, {status:404})
         }
 
-        const updatedEmail = await conn.query("SELECT * FROM email WHERE emain_id = ? ", [params.id])
+        const updatedEmail = await conn.query("SELECT * FROM email WHERE email_id = ? ", [params.id])
 
         return NextResponse.json(updatedEmail[0])
     } catch (error) {

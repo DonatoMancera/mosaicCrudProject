@@ -1,20 +1,34 @@
 "use client"
 import React from "react"
+import Link from "next/link";
 import { Card, Button} from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import styled from "styled-components";
+
+const CardLink = styled.a`
+    text-decoration: none;
+    &:hover{
+        color:  #101010; ;
+    }
+`
+
 export default function page({email}){
     return(
-            <Card className="me-3">
+            <Card className="me-3 mb-2">
+                <CardLink href={`/Emails/${email.email_id}`}>
+                    <Card.Header>{email.name}</Card.Header>
+                </CardLink>
                 <Card.Body>
-                    <Card.Title>{email.name}</Card.Title>
                     <Card.Text>
+                        correo: {email.email}
+                        
+                    <br/>
                         phone: {email.phone}
                     <br/>
-                        asunto: {email.description}
+                        description: ...
                     </Card.Text>
-                    <Button className="text-light bg-dark">Edit</Button>
                 </Card.Body>
             </Card>
+        
     )
 }
 

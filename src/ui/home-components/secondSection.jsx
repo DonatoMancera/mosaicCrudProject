@@ -47,8 +47,8 @@ const Page = () =>{
                     <button type="button" className="btn btn-outline-dark btn-lg">Know Us</button>
                 </div>
                 <div className="secondImgs">
-                    <Image className="vertical" src="/public/images/vertical.jpg" alt="" layout="responsive" width={27} height={40} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-                    <Image className="horizontal" src="/public/images/horizontal.jpg" alt="" layout="responsive" width={30} height={40} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                    <Image className="vertical" src="/images/vertical.jpg" alt="" width={400} height={350} />
+                    <Image className="horizontal" src="/images/horizontal.jpg" alt="" width={400} height={350} />
                 </div>
             </SecondContainer>
         </>

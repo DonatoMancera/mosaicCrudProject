@@ -1,29 +1,24 @@
 "use client"
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-import React, {useEffect} from "react"
-import styled from "styled-components"
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
+import styled from "styled-components";
 
+const FirstSection = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
-const  FirstSection = () =>{
-    useEffect(() => {
-        Aos.init();
-    },)
-    /*********************************************/
-
-    
-
-    return (
-        <>
-            <FirstContainer>
-                <div className="homeContainer">
-                    <h1><span>TRANSFORMING</span> BUSINESSES,<br/>EMPOWERING FUTURES</h1>
-                </div>
-                <div className=" buttonContainer d-flex justify-content-start mx-auto" data-aos="fade-up" data-aos-duration="3000">
-                    <button type="button" className="btn btn-outline-light btn-lg me-5 ms-5">Let's build a website</button>
-                    <button type="button" className="btn btn-outline-light btn-lg">About Us</button>
-                </div>
-                <svg width="1841" height="1383" viewBox="0 0 1841 1383" fill="none" xmlns="http://www.w3.org/2000/svg">
+  return (
+    <FirstContainer>
+      <div className="homeContainer">
+        <h1><span>TRANSFORMING</span> BUSINESSES,<br/>EMPOWERING FUTURES</h1>
+      </div>
+      <div className="buttonContainer d-flex justify-content-start mx-auto" data-aos="fade-up" data-aos-duration="3000">
+        <button type="button" className="btn btn-outline-light btn-lg me-5 ms-5">Let's build a website</button>
+        <button type="button" className="btn btn-outline-light btn-lg">About Us</button>
+      </div>
+      <svg width="1841" height="1383" viewBox="0 0 1841 1383" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Group 4">
                         <rect id="Rectangle 1" x="491" y="1383" width="413" height="850" rx="206.5" transform="rotate(-90 491 1383)" fill="url(#paint0_linear_33_2)"/>
                         <rect id="Rectangle 8" x="991" y="898" width="413" height="850" rx="206.5" transform="rotate(-90 991 898)" fill="url(#paint1_linear_33_2)"/>
@@ -82,54 +77,53 @@ const  FirstSection = () =>{
                     </linearGradient>
                     </defs>
                 </svg>
+    </FirstContainer>
+  );
+};
 
-            </FirstContainer>
-        </>
-    )
-}
 export default FirstSection;
+
 const FirstContainer = styled.div`
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    width: 100%;
-    height: 30rem;
-    padding-top: 4rem;
-    padding-bottom: 8rem;
-    position: relative;
-    background-color: #101010;
+  width: 100%;
+  height: 30rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  position: relative;
+  background-color: #101010;
 
-    .homeContainer {
-        h1 {
-            font-family: "Poppins", sans-serif;
-            color: #F4F4F2;
-            font-weight: 900;
-            font-size: 2.5rem;
-            margin-top: 8rem;
-            margin-left: 25px;
-            span {
-                color: #F1511B;
-            }
-        }
+  .homeContainer {
+    h1 {
+      font-family: "Poppins", sans-serif;
+      color: #F4F4F2;
+      font-weight: 900;
+      font-size: 2.5rem;
+      margin-top: 8rem;
+      margin-left: 25px;
+      span {
+        color: #F1511B;
+      }
     }
+  }
+  svg{
+    position: absolute;
+    top: -27.2rem;
+    left: 50rem;
+    width: 40%;
+    z-index: 5;
+  }
+
+  @media (max-width: 900px) {
+    height: auto;
     svg{
-        position: absolute;
-        top: -27.2rem;
-        left: 50rem;
-        width: 40%;
-        z-index: 5;
+      display: none;
     }
-
-    @media (max-width: 900px) {
-        height: auto;
-        svg{
-            display: none;
-        }
-        .homeContainer {
-            align-items: center;
-            h1 {
-                font-size: 2rem;
-                text-align: center;
-                margin: 2rem 0;
-            }
-        }
+    .homeContainer {
+      align-items: center;
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin: 2rem 0;
+      }
     }
+  }
 `;

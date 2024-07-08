@@ -23,7 +23,7 @@ export default function NavBar() {
                 <div className={`links ${clicked ? 'active' : ''}`}>
                     <Link href="/Home" onClick={closeMenu}>Home</Link>
                     <Link href="/aboutus" onClick={closeMenu}>About Us</Link>
-                    <Link href="/services" onClick={closeMenu}>Services</Link>
+                    <Link href="/ourservices" onClick={closeMenu}>Services</Link>
                     <Link href="/Emails" onClick={closeMenu}>Contact Us</Link>
                 </div>
                 <div className="burgerContainer">
@@ -34,8 +34,7 @@ export default function NavBar() {
     );
 }
 
-const NavContainer = styled.nav`
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+const NavContainer = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
     z-index: 30;
     position: sticky;
@@ -66,7 +65,6 @@ const NavContainer = styled.nav`
     }
 
     a {
-        font-family: "Poppins", sans-serif;
         font-weight: 300;
         color: black;
         text-decoration: none;

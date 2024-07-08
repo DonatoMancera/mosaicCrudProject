@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    compiler:{
+        css:{
+            map: false
+        }
+    }
+
+};
 
 
 
